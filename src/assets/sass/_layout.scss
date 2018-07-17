@@ -1,7 +1,4 @@
-
-
 body {
-  background-color: $theme-color;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,20 +6,116 @@ body {
   transition: .5s;
 }
 
-.btn {
+body.default {
   background-color: $theme-color;
+  .btn {
+    background-color: $theme-color;
+  }
+  .quote-wrapper {
+    color: $theme-color;
+  }
+  .btn-icons {
+    background-color: $theme-color;
+  }
+}
+
+body.theme-1 {
+  background-color: $theme-color-1;
+  .btn {
+    background-color: $theme-color-1;
+  }
+  .quote-wrapper {
+    color: $theme-color-1;
+  }
+  .btn-icons {
+    background-color: $theme-color-1;
+  }
+}
+
+body.theme-2 {
+  background-color: $theme-color-2;
+  .btn {
+    background-color: $theme-color-2;
+  }
+  .quote-wrapper {
+    color: $theme-color-2;
+  }
+  .btn-icons {
+    background-color: $theme-color-2;
+  }
+}
+
+body.theme-3 {
+  background-color: $theme-color-3;
+  .btn {
+    background-color: $theme-color-3;
+  }
+  .quote-wrapper {
+    color: $theme-color-3;
+  }
+  .btn-icons {
+    background-color: $theme-color-3;
+  }
+}
+
+body.theme-4 {
+  background-color: $theme-color-4;
+  .btn {
+    background-color: $theme-color-4;
+  }
+  .quote-wrapper {
+    color: $theme-color-4;
+  }
+  .btn-icons {
+    background-color: $theme-color-4;
+  }
+}
+
+body.theme-5 {
+  background-color: $theme-color-5;
+  .btn {
+    background-color: $theme-color-5;
+  }
+  .quote-wrapper {
+    color: $theme-color-5;
+  }
+  .btn-icons {
+    background-color: $theme-color-5;
+  }
+}
+
+body.theme-6 {
+  background-color: $theme-color-6;
+  .btn {
+    background-color: $theme-color-6;
+  }
+  .quote-wrapper {
+    color: $theme-color-6;
+  }
+  .btn-icons {
+    background-color: $theme-color-6;
+  }
+}
+
+body.theme-7 {
+  background-color: $theme-color-7;
+  .btn {
+    background-color: $theme-color-7;
+  }
+  .quote-wrapper {
+    color: $theme-color-7;
+  }
+  .btn-icons {
+    background-color: $theme-color-7;
+  }
+}
+
+.btn {
   transition: .5s;
 }
 
-.loading{
-  position: relative;
-  left: 15px;
-  display: none;
-}
-
-#root{
-
-  & > div{
+#root {
+  &>div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,33 +123,20 @@ body {
     text-align: center;
   }
   .quote-container {
-    position: relative;
-    bottom: 80px;
-
     @media screen and (max-width: $mobile-breakpoint) {
       top: 15%;
       margin-bottom: 50px;
     }
-
     .quote-wrapper {
       background-color: white;
       padding: 30px 50px;
       min-width: 500px;
       max-width: 500px;
       border-radius: 3px;
-      color: $theme-color;
-
-
       @media screen and (max-width: $mobile-breakpoint) {
         padding: 25px 30px;
         min-width: initial;
       }
-
     }
-
-
   }
 }
-
-
-

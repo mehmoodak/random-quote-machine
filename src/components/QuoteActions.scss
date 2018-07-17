@@ -1,19 +1,19 @@
 @import '../assets/sass/variables.scss';
-
-
 .quote-actions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .btn-icons {
-      background-color: $theme-color;
-      color: white;
-      transition: .5s;
-    }
-
-    #new-quote {
-      color: white;
-      font-size: 14px;
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .btn-icons {
+    color: white;
+    transition: .5s;
   }
+  .loading {
+    position: relative;
+    left: 15px;
+    font-size: 30px;
+  }
+  #new-quote {
+    color: white;
+    font-size: 14px;
+  }
+}
