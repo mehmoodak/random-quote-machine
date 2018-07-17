@@ -9,9 +9,14 @@ import TweetButton from './TweetButton';
 
 export default class QuoteActions extends Component {
     render() {
+        // stripping html
+        let temp = document.createElement('div');
+        temp.innerHTML = this.props.quote;
+        let tweetQuote = temp.textContent;
+
         return (
             <div className="quote-actions">
-                <TweetButton tweetText="Random%20Quote%20Generator" />
+                <TweetButton tweetText={tweetQuote} />
 
                 {
                     this.props.isLoading &&
