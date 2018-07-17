@@ -1,0 +1,20 @@
+@import '../assets/sass/variables.scss';
+
+#source-link {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 40px;
+  
+    @media screen and (max-width: $mobile-breakpoint) {
+      position: absolute;
+      top: 90%;
+      left: 50%;
+      color: white;
+      width: 30px;
+      font-size: 30px;
+      height: 30px;
+      transform: translateX(-50%);
+    }
+  }

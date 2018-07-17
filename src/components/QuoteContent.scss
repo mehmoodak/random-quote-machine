@@ -1,0 +1,27 @@
+@import '../assets/sass/variables.scss';
+
+.quote-author {
+    margin: 10px 0 25px;
+    text-align: right;
+    font-size: 14px;
+    transition: .5s;
+  }
+
+
+  .quote-content {
+    position: relative;
+    font-size: 25px;
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      font-size: 20px;
+    }
+
+    .quote-symbol {
+      margin-right: 5px;
+    }
+
+    #quote > p {
+      display: inline;
+      transition: .5s;
+    }
+  }

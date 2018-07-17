@@ -46,77 +46,17 @@ body {
       border-radius: 3px;
       color: $theme-color;
 
+
       @media screen and (max-width: $mobile-breakpoint) {
         padding: 25px 30px;
         min-width: initial;
       }
 
-      .quote-text {
-        position: relative;
-        font-size: 25px;
-
-        @media screen and (max-width: $mobile-breakpoint) {
-          font-size: 20px;
-        }
-
-        .quote-symbol {
-          margin-right: 5px;
-        }
-
-        #quote > p {
-          display: inline;
-          transition: .5s;
-        }
-      }
-
-      .quote-author {
-        margin: 10px 0 25px;
-        text-align: right;
-        font-size: 14px;
-        transition: .5s;
-      }
     }
 
-    .quote-actions {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
 
-      .btn-icons {
-        background-color: $theme-color;
-        color: white;
-        transition: .5s;
-      }
-
-      #new-quote {
-        color: white;
-        font-size: 14px;
-      }
-    }
   }
 }
 
-.credits {
-  margin-top: 8px;
-  color: white;
-  font-size: 12px;
-}
 
-#source-link {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  color: white;
-  font-size: 40px;
 
-  @media screen and (max-width: $mobile-breakpoint) {
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    color: white;
-    width: 30px;
-    font-size: 30px;
-    height: 30px;
-    transform: translateX(-50%);
-  }
-}
