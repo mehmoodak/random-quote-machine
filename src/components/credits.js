@@ -8,7 +8,7 @@ export default class Credits extends Component{
                 <div className="made-by">
                     by <span id="developer-name"> Mehmood Ahmad Khan </span>
                 </div>
-            </div>
+            </div> 
         );
     }
 }

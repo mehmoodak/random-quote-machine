@@ -92,9 +92,9 @@
     "extends": "react-app"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.0-14",
-    "@fortawesome/free-brands-svg-icons": "^5.1.0-11",
-    "@fortawesome/free-solid-svg-icons": "^5.1.0-11",
+    "@fortawesome/fontawesome-svg-core": "^1.2.0",
+    "@fortawesome/free-brands-svg-icons": "^5.1.0",
+    "@fortawesome/free-solid-svg-icons": "^5.1.0",
     "@fortawesome/react-fontawesome": "0.1.0-11",
     "node-sass": "^4.9.2",
     "sass-loader": "^7.0.3"
