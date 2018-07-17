@@ -1,4 +1,8 @@
-.className {
-    background-color: #000;
-    color: #fff;
-}
+
+@import "assets/sass/normalize";
+
+@import "./assets/sass/variables";
+
+@import "./assets/sass/elements";
+
+@import "./assets/sass/layout";
