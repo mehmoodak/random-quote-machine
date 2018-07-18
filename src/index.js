@@ -1,7 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import QuotesApp from './QuotesApp';
-import registerServiceWorker from './registerServiceWorker';
+import {render} from 'react-dom';
+import {Provider} from 'react-redux';
+import store from './redux/store';
+import QuotesAppContainer from './containers/QuoteAppContainer';
+// import QuotesApp from './QuotesApp';
 
-ReactDOM.render(<QuotesApp />, document.getElementById('root'));
-registerServiceWorker();
+render(
+<Provider store={store}>
+    <QuotesAppContainer/>
+</Provider>, document.getElementById('root'));
+
+// render(<QuotesApp/>, document.getElementById('root'));
+    

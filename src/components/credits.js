@@ -6,7 +6,7 @@ export default class Credits extends Component{
         return(
             <div className="credits">
                 <div className="made-by">
-                    by <span id="developer-name"> Mehmood Ahmad Khan </span>
+                    by <span id="developer-name"> {this.props.name} </span>
                 </div>
             </div> 
         );

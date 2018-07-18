@@ -8,22 +8,14 @@ import QuoteActions from './components/QuoteActions';
 import QuoteContent from './components/QuoteContent';
 
 class QuotesApp extends Component {
-
     constructor(props) {
         super(props);
-        this.state = {
-            quote: {
-                text: "Loading...",
-                author: "Author",
-            },
-            isLoading: true,
-        }
-
-        this.getQuote = this.getQuote.bind(this);
+        console.log("Quotes App", this.props);
     }
 
     componentDidMount() {
-        this.getQuote();
+        // this.getQuote();
+        this.props.getQuote();
     }
 
     changeTheme() {
@@ -34,40 +26,40 @@ class QuotesApp extends Component {
 
     getQuote() {
 
-        this.setState({
-            isLoading: true
-        });
+        // this.setState({
+        //     isLoading: true
+        // });
 
-        fetch("https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1", { cache: 'no-cache' })
-            .then(response => response.json())
-            .then(data => {
-                console.group("Data");
-                console.log("Data", data);
-                console.log("Quote : ", data[0].content)
-                console.log("Author : ", data[0].title)
-                console.groupEnd();
+        // fetch("https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1", { cache: 'no-cache' })
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         console.group("Data");
+        //         console.log("Data", data);
+        //         console.log("Quote : ", data[0].content)
+        //         console.log("Author : ", data[0].title)
+        //         console.groupEnd();
 
-                this.setState({
-                    quote:{
-                        text: data[0].content,
-                        author: data[0].title,
-                    },
-                    isLoading: false,
-                });
+        //         this.setState({
+        //             quote:{
+        //                 text: data[0].content,
+        //                 author: data[0].title,
+        //             },
+        //             isLoading: false,
+        //         });
 
-                this.changeTheme();
-            })
-            .catch(error => console.error(error));
+        //         this.changeTheme();
+        //     })
+        //     .catch(error => console.error(error));
     }
     render() {
         return (
             <div>
                 <div className="quote-container">
                     <div className="quote-wrapper">
-                        <QuoteContent quote={this.state.quote.text} author={this.state.quote.author} />
-                        <QuoteActions getNewQuote={this.getQuote} isLoading={this.state.isLoading} quote={this.state.quote.text} />
+                        <QuoteContent quote={this.props.quote.text} author={this.props.quote.author} />
+                        <QuoteActions getNewQuote={this.props.getQuote} isLoading={this.props.isLoading} quote={this.props.quote.text} />
                     </div>
-                    <Credits />
+                    <Credits name="Mehmood Ahmad Khan"/>
                 </div>
                 <RepoIcon url="https://github.com/mehmoodak/random-quote-machine" />
             </div>

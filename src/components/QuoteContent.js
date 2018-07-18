@@ -5,6 +5,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
 
 export default class QuoteContent extends Component{
+
+    constructor(props){
+        super(props);
+        console.log("Quotes Component", props);
+    }
     render(){
         return(
             <div className="quote-content">
