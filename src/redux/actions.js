@@ -7,10 +7,11 @@ export function newQuote() {
     return function (dispatch) {
 
         dispatch(loading(true));
+        let url = "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&timestamp=" + new Date().getTime();
 
-        return fetch("https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1", {
-            cache: 'no-cache'
-        })
+        return fetch(url, {
+                cache: 'no-store'
+            })
             .then(response => response.json())
             .then(data => {
                 // ----- Log Start ----------
