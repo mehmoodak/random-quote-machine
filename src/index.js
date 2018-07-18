@@ -3,12 +3,9 @@ import {render} from 'react-dom';
 import {Provider} from 'react-redux';
 import store from './redux/store';
 import QuotesAppContainer from './containers/QuoteAppContainer';
-// import QuotesApp from './QuotesApp';
 
 render(
 <Provider store={store}>
     <QuotesAppContainer/>
 </Provider>, document.getElementById('root'));
 
-// render(<QuotesApp/>, document.getElementById('root'));
-    
